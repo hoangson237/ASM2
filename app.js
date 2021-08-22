@@ -9,7 +9,7 @@ app.use(express.static(publicDir));
 
 const {MongoClient, ObjectId} = require('mongodb');
 const url = 'mongodb+srv://hoangsonn:123456abc@cluster0.gi3n7.mongodb.net/test';
-const url = "mongodb://localhost:27017";
+// const url = "mongodb://localhost:27017";
 
 app.get('/', async function(req,res){
     const client= await MongoClient.connect(url);
