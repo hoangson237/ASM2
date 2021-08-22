@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Page</title>
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+<div class="container">
+<h1>Lego Shop </h1>
+<h2>Made by Hsonn</h2> 
+<table class="styleTable" border="3">
+    <tr>
+        
+        <th class="name"> <h1>Name of Product </h1></th> 
+        <th class="id"><h1>Price</h1></th>
+        <th class="name"><h1>Description</h1></th>
+        <th class="name"><h1>Option</h1></th>
+        
+    </tr>
+    {{#each products}}
+    <tr>
+        <td class="name">{{name}}</td>
+        <td class="id">{{price}}</td>
+        <td class="name">{{description}}</td>
+        <td class="btn">
+        <a class="btn_index" href="/delete?id={{_id}}"><input type="submit" id="btn" value="Delete"></a>
+        <a class="btn_index" href="insert"><input type="submit" id="btn" value="Add"></a> 
+        </td> 
+    </tr>  
+        {{/each}}
+</table>
+</div>
+</body>
+</html>
+
+
