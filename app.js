@@ -8,7 +8,7 @@ var publicDir = require('path').join(__dirname,'/public');
 app.use(express.static(publicDir));
 
 const {MongoClient, ObjectId} = require('mongodb');
-// const url = 'mongodb+srv://hoangsonn:123456abc@cluster0.gi3n7.mongodb.net/test';
+const url = 'mongodb+srv://hoangsonn:123456abc@cluster0.gi3n7.mongodb.net/test';
 const url = "mongodb://localhost:27017";
 
 app.get('/', async function(req,res){
@@ -39,9 +39,6 @@ app.post('/doInsert',async function (req,res){
     const Name = req.body.txtName;
     const Price = req.body.txtPrice;
     const Description = req.body.txtDescription;
-    // if (Name.length < 4) {
-    //     res.render("insert", {errorMsg: 'Sai roi'})
-    // }
     const newProduct = {name : Name, price : Price, description: Description};
     await dbo.collection("products").insertOne(newProduct);
     console.log(newProduct);
