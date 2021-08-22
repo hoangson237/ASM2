@@ -37,7 +37,6 @@ p#copyright {
 .navbar-name {
   list-style-type: none;
   padding-bottom: 30px;
-
 }
 
 body {
@@ -70,12 +69,6 @@ h2 {
 
 div {
   text-transform: uppercase;
-}
-
-ul.navbar-name {
-  border: 2px solid black;
-  border-radius: 25px;
-
 }
 
 table.styleTable { 
@@ -146,8 +139,10 @@ footer ul {
 }
 
 nav {
-  margin: 35px;
-
+  margin: 20px;
 }
 
+img {
+  margin-top: -50px;
+}
  
