@@ -49,7 +49,6 @@ app.post('/doInsert',async function (req,res){
     res.redirect('/');
 });
 
-
 const PORT = process.env.PORT || 5000
 app.listen(PORT);
 console.log("Server is running at " + PORT)
